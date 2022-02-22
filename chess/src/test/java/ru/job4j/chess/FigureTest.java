@@ -24,17 +24,6 @@ public class FigureTest {
         BishopBlack bishopBlack = new BishopBlack(Cell.A3);
         assertThat(bishopBlack.copy(Cell.D2).position(), is(Cell.D2));
     }
-    /*
-    @Test
-    вариант теста 2
-    public void whenWayCorrect() {
-        BishopBlack bishopBlack = new BishopBlack(Cell.C1);
-        Cell[] cells = new Cell[] {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
-        Cell[] expected = bishopBlack.way(Cell.G5);
-        Assert.assertArrayEquals(expected, cells);
-    }
-
-     */
 
     @Test
     public void whenWayCorrect() {
