@@ -17,7 +17,7 @@ public class FigureTest {
     @Test
     public void whenCopyCorrect() {
         BishopBlack bishopBlack = new BishopBlack(Cell.A3);
-        assertThat(bishopBlack.copy(Cell.A3).position(), is(Cell.A3));
+        assertThat(bishopBlack.copy(Cell.D2).position(), is(Cell.D2));
     }
 
     @Test
