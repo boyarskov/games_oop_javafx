@@ -17,8 +17,6 @@ public class BishopBlack implements Figure {
     }
 
     @Override
-    //На данном этапе метод еще не реализован и Ваша задача реализовать его таким образом,
-    // чтобы он вернул массив из четырех клеток: D2, E3, F4, G5.
     public Cell[] way(Cell dest) {
         if (!isDiagonal(position, dest)) {
             throw new ImpossibleMoveException(
@@ -29,23 +27,18 @@ public class BishopBlack implements Figure {
         Cell[] steps = new Cell[size];
         int deltaX = position().getX() < dest.getX() ? 1 : -1;
         int deltaY = position().getY() < dest.getY() ? 1 : -1;
-        int x = position.getX() + deltaX;
-        int y = position.getY() + deltaY;
+        int x = position.getX();
+        int y = position.getY();
         for (int index = 0; index < size; index++) {
-            x = (index + 1) * deltaX + position().getX();
-            y = (index + 1) * deltaY + position().getY();
+            x += deltaX;
+            y += deltaY;
             steps[index] = Cell.findBy(x, y);
         }
         return steps;
     }
 
     public boolean isDiagonal(Cell source, Cell dest) {
-        boolean result = false;
-        for (int index = 0; index < ; index++) {
-
-
-        }
-        return result;
+        return Math.abs(source.getX() - dest.getX()) == Math.abs(source.getY() - dest.getY());
     }
 
     @Override
